@@ -12,11 +12,11 @@
         font-size: clamp(1.5rem, 10vw, 10rem);
         text-align: center;
 
-        /* color: hsl(0 0% 100% / 0);
+        color: hsl(0 0% 100% / 0);
         background-clip: text;
         -webkit-background-clip: text;
         background-repeat: no-repeat;
-        background-image: linear-gradient(to right, oklch(0.712 0.194 13.428), oklch(0.606 0.25 292.717)); */
+        background-image: linear-gradient(to right, oklch(0.712 0.194 13.428), oklch(0.606 0.25 292.717));
 
         & small {
             font-size: var(--text-3xs);

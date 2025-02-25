@@ -4,7 +4,7 @@
 
     width: var(--container-sm);
     max-width: 90vw;
-    background-color: var(--bg-color);
+    background-color: var(--gray-50);
     padding: 0;
     border-radius: var(--rounded-md);
 
@@ -18,14 +18,16 @@
         align-items: center;
         gap: var(--space-4);
         padding: var(--space-4);
-        background-color: var(--bg-accent);
+        background-color: var(--gray-200);
+        border-top: 1px solid var(--gray-300);
     }
 
     @media (prefers-color-scheme: dark) {
-        background-color: var(--bg-accent);
+        background-color: var(--gray-600);
 
         > form {
-            background-color: var(--bg-color);
+            background-color: var(--gray-800);
+            border-color: var(--gray-900);
         }
     }
 }

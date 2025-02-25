@@ -4,7 +4,7 @@
     grid-column: nav;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: var(--size-128) 1fr;
+    grid-template-rows: auto 1fr;
 
     background-color: var(--bg);
     border-right: 1px solid var(--border);
@@ -17,7 +17,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-inline: var(--space-5);
+        padding: var(--space-10) var(--space-5);
 
         .logo {
             font-size: var(--text-2xl);

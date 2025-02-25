@@ -16,3 +16,5 @@
 @import url(./components/button.css) layer(components);
 @import url(./components/nav.css) layer(components);
 @import url(./components/main.css) layer(components);
+@import url(./components/header.css) layer(components);
+@import url(./components/aside.css) layer(components);

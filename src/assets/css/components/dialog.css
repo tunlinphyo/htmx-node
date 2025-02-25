@@ -8,9 +8,9 @@ dialog[data-dialog] {
     transition: display .3s allow-discrete, overlay .3s allow-discrete;
     animation: popupOut .3s var(--easeInSine);
 
-    --dialog-backgrop: #0005;
+    --dialog-backgrop: #0009;
     @media (prefers-color-scheme: dark) {
-        --dialog-backgrop: #9999;
+        --dialog-backgrop: #000C;
     }
 
     &::backdrop {
