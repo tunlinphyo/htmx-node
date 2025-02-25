@@ -1,0 +1,11 @@
+.htmx-indicator {
+    display: none;
+
+    &.htmx-request {
+        display: block;
+
+        &.spinner {
+            animation: loadingSpinner .5s ease infinite;
+        }
+    }
+}

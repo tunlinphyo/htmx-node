@@ -1,0 +1,10 @@
+.main {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: var(--size-128) 1fr;
+    grid-column: full;
+
+    &.main--body {
+        grid-column: body;
+    }
+}

@@ -1,0 +1,53 @@
+.admin-nav {
+    --bg: var(--gray-100);
+
+    grid-column: nav;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--size-128) 1fr;
+
+    background-color: var(--bg);
+    border-right: 1px solid var(--border);
+
+    @media (prefers-color-scheme: dark) {
+        --bg: var(--gray-950);
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-inline: var(--space-5);
+
+        .logo {
+            font-size: var(--text-2xl);
+            letter-spacing: 4px;
+        }
+    }
+
+    & ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: var(--space-2);
+
+        > li {
+            padding-inline: var(--space-2);
+
+            > a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: var(--space-3);
+                block-size: var(--size-32);
+                padding-inline: var(--space-3);
+
+                text-decoration: none;
+                color: var(--fg-accent);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    {{#each cssPath as |css|}}
+        <link rel="stylesheet" href="{{css}}">
+    {{/each}}
+    {{#each scriptPath as |js|}}
+        <script src="{{js}}" defer></script>
+    {{/each}}
+</head>
+
+<body hx-boost="true">
+    {{> admin/nav}}
+    {{{body}}}
+    {{> confirm-dialog}}
+</body>
+
+</html>

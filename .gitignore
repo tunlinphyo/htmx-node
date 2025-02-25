@@ -1,0 +1,48 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
+
+# TypeScript build files
+dist/
+build/
+*.js
+*.js.map
+*.d.ts
+!postcss.config.js
+!watchFiles.js
+!bin/create-htmx-node.js
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# HTMX-related cache
+public/cache/
+public/tmp/
+src/public/css
+src/public/js
+src/public/admin

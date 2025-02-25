@@ -1,0 +1,36 @@
+.main-section {
+    grid-column: body;
+    grid-row: body;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-4);
+
+    & h1 {
+        font-size: clamp(1.5rem, 10vw, 10rem);
+        text-align: center;
+
+        /* color: hsl(0 0% 100% / 0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to right, oklch(0.712 0.194 13.428), oklch(0.606 0.25 292.717)); */
+
+        & small {
+            font-size: var(--text-3xs);
+            display: block;
+        }
+    }
+
+    & ul {
+        margin: 0;
+        padding: var(--space-4);
+        list-style: none;
+
+        > li {
+            text-align: center;
+        }
+    }
+}

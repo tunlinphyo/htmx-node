@@ -1,0 +1,24 @@
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    inline-size: var(--container-full);
+    block-size: var(--container-full);
+}
+
+body {
+    display: grid;
+    grid-template-columns:
+        [edge-start nav-start]
+            clamp(15rem, 15vw, 23rem)
+        [nav-end body-start full-start]
+            1fr
+        [body-end aside-start]
+            clamp(18.75rem, 20vw, 25rem)
+        [aside-end full-end edge-end]
+    ;
+    grid-template-rows: 1fr;
+
+    background-color: var(--bg-color);
+}

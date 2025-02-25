@@ -1,0 +1,45 @@
+{
+  "name": "create-htmx-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "create-htmx-node": "bin/create-htmx-node.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp -r src/public dist/public && cp -r src/views dist/views",
+    "start": "node dist/app.js",
+    "watch:ts": "esbuild src/assets/js/*.ts --bundle --outdir=src/public/js && src/assets/admin/js/*.ts --bundle --outdir=src/public/admin/js --watch",
+    "watch:css": "postcss src/assets/css/*.css --dir src/public/css && src/assets/admin/css/*.css --dir src/public/admin/css --watch",
+    "watch:files": "node watchFiles.js",
+    "watch": "concurrently \"npm run watch:files\" \"npm run watch:ts\" \"npm run watch:css\"",
+    "dev:server": "nodemon --watch src --exec ts-node src/app.ts",
+    "dev": "concurrently \"npm run dev:server\" \"npm run watch\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["npx", "create", "project", "htmx", "node", "express", "handlebar", "TypeScript"],
+  "author": "Tun Lin Phyo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "fs-extra": "^11.3.0",
+    "htmx.org": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.25.0",
+    "nodemon": "^3.1.9",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,30 @@
+@import url(./confirm-dialog.css);
+
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+dialog[data-dialog] {
+    transition: display .3s allow-discrete, overlay .3s allow-discrete;
+    animation: popupOut .3s var(--easeInSine);
+
+    --dialog-backgrop: #0005;
+    @media (prefers-color-scheme: dark) {
+        --dialog-backgrop: #9999;
+    }
+
+    &::backdrop {
+        animation: fadeOut .3s linear;
+        background-color: var(--dialog-backgrop);
+    }
+
+    &[open] {
+        animation: popupIn .3s var(--easeOutSine);
+        translate: 0 -60px;
+
+        &::backdrop {
+            opacity: 1;
+            animation: fadeIn .3s linear;
+        }
+    }
+}
